@@ -3,6 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .models import Profile, Post
+import datetime as dt
+from . forms import ProfileForm, PostForm
 
 # Create your views here.
 def index(request):
