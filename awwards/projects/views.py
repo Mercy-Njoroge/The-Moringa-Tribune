@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponse
-from .models import Profile
+from .models import Profile, Post
+
 # Create your views here.
 def index(request):
     date =dt.date.today()
