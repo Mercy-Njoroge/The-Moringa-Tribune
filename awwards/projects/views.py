@@ -48,3 +48,12 @@ def new_post(request):
                 form = PostForm()
                 return render(request,'projects/new_post.html', {"form":form})
 
+@login_required(login_url='/accounts/login/?next=/')
+def vote(request,post_id):
+    try:
+        post = Post.objects.get(id = post_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"projects/vote.html", {"post":post})
+
+
