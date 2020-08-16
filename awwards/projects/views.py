@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .models import Profile, Post
 import datetime as dt
 from . forms import ProfileForm, PostForm
@@ -68,3 +68,5 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'projects/search.html',{"message":message})
+
+
