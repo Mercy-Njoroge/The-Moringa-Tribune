@@ -5,9 +5,9 @@ class ProfileTestClass(TestCase):
     #Set up method
 
     def setUp(self):
-        self.new_user = User(username='Titus', email='titusouko@gmail.com', password='1234')
+        self.new_user = User(username='Mercy', email='aprilkasha42@gmail.com', password='1234')
         self.new_user.save()
-        self.new_profile = Profile(user=self.new_user,profile_picture="image.jpeg",bio="just testing", contact='titusouko@gmail.com')
+        self.new_profile = Profile(user=self.new_user,profile_picture="image.jpeg",bio="just testing", contact='aprilkasha42@@gmail.com')
     
     # Testing  instance
     def test_instance(self):
