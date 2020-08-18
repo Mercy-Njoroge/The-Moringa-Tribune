@@ -33,6 +33,9 @@ This is an app that allows users to like post and comment on other people posts
 -Open terminal on localhost:8000
 
 
+ ## Testing
+ with the virtual enviroment active,run  ./manage.py test
+
 
 ## Technologies Used
 * PYTHON 3.6
