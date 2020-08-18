@@ -3,6 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .models import Profile, Post
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import PostSerializer, ProfileSerializer
 import datetime as dt
 from . forms import ProfileForm, PostForm
 
