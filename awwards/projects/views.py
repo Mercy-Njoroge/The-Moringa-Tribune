@@ -73,3 +73,14 @@ def search_results(request):
         return render(request, 'projects/search.html',{"message":message})
 
 
+class PostList(APIView):
+    def get(self, request, format=None):
+        all_post = Post.objects.all()
+        serializers = PostSerializer(all_post, many=True)
+        return Response(serializers.data)
+
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        all_profile = Post.objects.all()
+        serializers = PostSerializer(all_profile, many=True)
+        return Response(serializers.data)
